@@ -40,6 +40,8 @@ def main():
         return x_train, x_test, y_train, y_test
 
     def plot_metrics(metrics_list):
+        fig, ax = plt.subplots()
+        
         if 'Confusion Matrix' in metrics_list:
             st.subheader("Confusion Matrix")
             plot_confusion_matrix(model, x_test, y_test, display_labels=class_names, ax=ax)
