@@ -17,7 +17,7 @@ def main():
     st.markdown("Are your mushrooms edible or poisonous? 🍄")
     st.sidebar.markdown("Are your mushrooms edible or poisonous? 🍄")
 
-    @st.cache_data(persist=True)
+    @st.cache(persist=True)
     def load_data():
         data = pd.read_csv("mushrooms.csv")
 
@@ -32,7 +32,7 @@ def main():
 
         return df_copy
 
-    @st.cache_data(persist=True)
+    @st.cache(persist=True)
     def split(df):
         y = df['type'].values
         x = df.drop(columns=['type']).values
