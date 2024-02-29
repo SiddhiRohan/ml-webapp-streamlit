@@ -1,4 +1,6 @@
 # Machine Learning Web Application using Streamlit
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
 This project demonstrates a simple binary classification web application built with [Streamlit](https://streamlit.io/). The goal is to predict whether mushrooms are [edible](https://en.wikipedia.org/wiki/Edible_mushroom) or [poisonous](https://en.wikipedia.org/wiki/Mushroom_poisoning) based on various features.
 
