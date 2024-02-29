@@ -42,7 +42,7 @@ def main():
     def plot_metrics(metrics_list):
         if 'Confusion Matrix' in metrics_list:
             st.subheader("Confusion Matrix")
-            plot_confusion_matrix(model, x_test, y_test, display_labels=class_names)
+            plot_confusion_matrix(model, x_test, y_test, display_labels=class_names, ax=ax)
             st.pyplot(fig)
         
         if 'ROC Curve' in metrics_list:
