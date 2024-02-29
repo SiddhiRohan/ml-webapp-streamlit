@@ -43,19 +43,19 @@ Open your web browser and navigate to the provided Streamlit local development s
 ## Usage Instructions
 
 1. **Choose Classifier:**
-- Use the sidebar to select the classifier of your choice: SVM, Logistic Regression or Random Forest.
+	- Use the sidebar to select the classifier of your choice: SVM, Logistic Regression or Random Forest.
 
 2. **Set Model Hyperparameters:**
-- Ajust model hyperparameters using the sliders and input fields in the sidebar.
+	- Ajust model hyperparameters using the sliders and input fields in the sidebar.
 
 3. **Classify:**
-- Click the "Classify" button to train the selected model and view classification.
+	- Click the "Classify" button to train the selected model and view classification.
 
 4. **Visualize Metrics:**
-- Choose metrics to visualize (Confusion Matrix, ROC Curve, Precision-Recall Curve) using the sidebar.
+	- Choose metrics to visualize (Confusion Matrix, ROC Curve, Precision-Recall Curve) using the sidebar.
 
 5. **Show Raw Data:**
-- Toggle the "Show raw data" checkbox to display the raw mushroom dataset.
+	- Toggle the "Show raw data" checkbox to display the raw mushroom dataset.
 
 ## Dependencies
 - [Streamlit](https://streamlit.io/)
