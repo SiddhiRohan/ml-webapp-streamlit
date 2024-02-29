@@ -17,18 +17,25 @@ def main():
     st.markdown("Are your mushrooms edible or poisonous? 🍄")
     st.sidebar.markdown("Are your mushrooms edible or poisonous? 🍄")
 
-    @st.cache(persist=True)
+    @st.cache_data(persist=True)
     def load_data():
         data = pd.read_csv("mushrooms.csv")
-        label = LabelEncoder()
-        for col in data.columns:
-            data[col] = label.fit_transform(data[col])
-        return data
 
-    @st.cache(persist=True)
+        df_copy = data.copy()
+
+        label = LabelEncoder()
+
+        df_copy['type'] = label.fit_transform(df_copy['type'])
+
+        for col in df_copy.columns:
+            df_copy[col] = label.fit_transform(df_copy[col])
+
+        return df_copy
+
+    @st.cache_data(persist=True)
     def split(df):
-        y = df.type
-        x = df.drop(columns=['type'])    
+        y = df['type'].values
+        x = df.drop(columns=['type']).values
         x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=0)
         return x_train, x_test, y_train, y_test
 
@@ -129,5 +136,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
